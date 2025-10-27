@@ -1,256 +1,303 @@
+/* Reset and base */
 * {
-    margin: 0;
-    padding: 0;
-
-}
-html{
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navbar styling */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
 #navbar {
-    display: flex;
-    align-items: center;
-    ;
-}
-
-/* Logo styling */
-#logo {
-    margin: 10px 10px;
-    /* adjust spacing around logo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 40px;
 }
 
 #logo img {
-    width: auto;
-    /* smaller size */
-    height: 45px;
-    /* equal height for circle */
-    border-radius: 50%;
-    /* makes it circular */
-    object-fit: contain;
-    /* ensures the image fits nicely */
-    /* space between logo and text */
-}
-
-/* Navigation links 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: #ff4500; /* hover color */
-#navbar{
-    position:sticky;
-    display: flex;
-    align-items: center;
-    top: 0px;
-    
+  height: 45px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: contain;
 }
 
 #navbar ul {
-    display: flex;
-      font-family: "Chewy", system-ui;
-
- 
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  font-family: "Chewy", system-ui;
 }
 
 #navbar ul li {
-    list-style: none;
-    font-size: 1.3em;
+  font-size: 1.1rem;
 }
 
 #navbar ul li a {
-    color: white;
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    text-decoration: none;
-
-
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
+
 #navbar ul li a:hover {
-    background-color: white;
-    color: black;
-    transition: 0.3s;
+  background-color: white;
+  color: black;
 }
 
-#navbar::before {
-    content: "";
-    background-color: black;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.4;
-    top:0px;
-    left:0px;
-}
-/*home section*/
-#home{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-justify-content: center;
-padding: 3px 200px;
-height:641px;
-   
-}
-#home::before{
-    content: "";
-    background:url(../bg.jpg) no-repeat center/cover;
-    position: absolute;
-    height: 90%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.89;
-    top:0px;
-    left:0px;
-
-}
-#home h1{
-    color:white;
-        text-align:center;
-}
-/*service section*/
-#services{
-    margin:34px;
-    display:flex;
-}
-#services .box{
-    border:2px solid brown;
-    padding:34px;
-    margin:3px 6px;
-    border-radius:28px;
-    background: #e2d9d6;
-          font-family: "Chewy", system-ui;
-
-}
-#services .box img{
-    height:160px;
-    margin:auto;
-    display:block;
-    
-    
-}
-#services .box p{
- font-family: "Lobster", sans-serif;}
-
-
-
-
- /*clients section*/
-#client-section
-{height:344px;
-    
-
-}
-#client-section::before
-{ content:"";
-    position:absolute;
-    background:url(../bg1.jpg)no-repeat center/cover;
-    width:100%;
-    height:34%;
-    z-index:-1;
-    opacity:0.3;
-
+/* Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  padding: 3px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
-#clients{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+#home::before {
+  content: "";
+  background: url(../bg.jpg) no-repeat center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.85;
 }
-#clients img{
-    height:80px;
-}
-.client-item{
-    padding:34px;
 
+#home h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+  color: white;
 }
 
-/* contact section */
-#contact{
-position:relative;
+#home p {
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1d3ac;
+  padding: 12px 18px;
+  border-radius: 12px;
+  margin: 15px auto;
+  font-family: "Lobster", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
-#contact::before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: url(../contact.png)no-repeat center center/cover;
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: #431908;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
-#contact-box{
-    display:flex;
-justify-content: center;
-align-items: center;
-padding-bottom: 34px;
+
+.btn:hover {
+  background: white;
+  color: #431908;
 }
+
+/* Services */
+#services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+#services .box {
+  flex: 1 1 300px;
+  border: 2px solid brown;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  background: #e2d9d6;
+  font-family: "Chewy", system-ui;
+  max-width: 350px;
+}
+
+#services .box img {
+  height: 140px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+#services .box p {
+  font-family: "Lobster", sans-serif;
+  font-size: 1rem;
+}
+
+/* Clients */
+#client-section {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+#client-section::before {
+  content: "";
+  position: absolute;
+  background: url(../bg1.jpg) no-repeat center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+#clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#clients img {
+  height: 80px;
+  width: auto;
+}
+
+/* Contact */
+#contact {
+  position: relative;
+  padding: 40px 20px;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  background: url(../contact.png) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+#contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-box form {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#contact-box label {
+  font-size: 1.1rem;
+  font-family: "Lobster", sans-serif;
+}
+
 #contact-box input,
-#contact-box textarea{
-    width: 100%;
-    padding:0.5rem;
-    border-radius:9px;
-    font-size: 1.1rem;
-}
-#contact-box form{
-    width:40%;
-}
-#contact-box label{
-    font-size:1.3rem;
-    font-family: "Lobster", sans-serif;
+#contact-box textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 8px;
+  border: 1px solid #ccc;
 }
 
-footer{
-    background: black;
-    color: white;
-    padding: 9px 20px;
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
-/*utility classes*/
-.h-primary{
-    font-size:3.8rem;
-    padding:12px;
-      font-family: "Sacramento", cursive;
-      color:black;
 
+/* Utility */
+.center {
+  text-align: center;
 }
-.h-secondary{
-    font-size:2.3rem ;
-    padding:12px;
-    text-align: center;
+
+.h-primary {
+  font-size: 2.8rem;
+  font-family: "Sacramento", cursive;
+  margin: 15px 0;
+  color: black;
 }
-#home p{
-    color:#f1d3ac;
-        text-align:center;
-        font-size: 1.5rem;
-        font-family: "Lobster", sans-serif;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 13%;
-        opacity: 0.85;
-        padding: 8px;
+
+.h-secondary {
+  font-size: 1.8rem;
+  margin: 10px 0;
 }
-.btn{
-    padding:6px 20px;
-    border: 2px solid white;
-background-color: #431908;
-opacity: 0.85;    
-color:white;
-    margin:17px;
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+  }
+
+  #home h1 {
+    font-size: 2.2rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+
+  .h-primary {
+    font-size: 2.2rem;
+  }
+
+  .h-secondary {
     font-size: 1.5rem;
-    border-radius: 15%;
-    cursor:pointer
+  }
 }
-.center{
-    text-align: center;
+
+@media (max-width: 600px) {
+  #services .box {
+    flex: 1 1 90%;
+  }
+
+  #clients img {
+    height: 60px;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  #home p {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  #contact-box form {
+    width: 90%;
+  }
 }

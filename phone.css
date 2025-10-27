@@ -1,53 +1,59 @@
-/*navigation*/
-#navbar{
-    flex-direction: column;
+/* Additional fine-tuning for small screens below 480px */
+
+#navbar {
+  flex-direction: column;
+  text-align: center;
 }
 
-/*home section*/
-#home{
-height: 370px;
-padding: 3px 28px;
-}
-#home::before{
-height: 480px;
-}
-#home p{
-    font-size: 13px;
-}
-/*services section*/
-#services{
-    flex-direction: column;
-
-
-}
-#services .box{
-padding: 14px;
-margin:2px 0px;
-margin-bottom: 20px;
-}
-/*clients section*/
-#clients{
-    overflow: hidden;
-}
-#clients img{
-    width:126px;
-    padding:2px 6px;
-    height:auto;
+#navbar ul {
+  flex-direction: column;
+  width: 100%;
 }
 
-/* contact us secion */
-#contact-box form{
-    width:80%;
-    
+#navbar ul li {
+  padding: 6px 0;
 }
 
-/* footer */
-
-/*utility classes*/
-.h-primary{
-    font-size:26px ;
+#home {
+  padding: 15px 10px;
+  height: auto;
 }
-.btn{
-    font-size:13px ;
-    padding: 4px 8px;
+
+#home h1 {
+  font-size: 1.8rem;
+}
+
+#home p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+}
+
+#services {
+  flex-direction: column;
+  align-items: center;
+}
+
+#services .box {
+  width: 95%;
+  margin: 8px 0;
+}
+
+#clients img {
+  width: 70px;
+}
+
+#contact-box form {
+  width: 95%;
+}
+
+footer {
+  font-size: 0.85rem;
+  padding: 8px;
 }
